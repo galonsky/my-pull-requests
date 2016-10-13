@@ -14,11 +14,11 @@ API_URL = "https://api.github.com"
 config = ConfigParser.ConfigParser()
 config.read('auth.cfg')
 
-AUTH_USERNAME = config.get('auth', 'AUTH_USERNAME')
-AUTH_TOKEN = config.get('auth', 'AUTH_TOKEN')
+AUTH_USERNAME = config.get('auth', 'username')
+AUTH_TOKEN = config.get('auth', 'token')
 
-INDIVIDUALS_MENTIONED = ['galonsky']
-TEAMS_MENTIONED = ['betterment/trading', 'betterment/corestrength']
+INDIVIDUALS_MENTIONED = config.get('pull_requests', 'individuals').split(',')
+TEAMS_MENTIONED = config.get('pull_requests', 'teams').split(',')
 
 def get_json(url):
   base64string = base64.encodestring('%s:%s' % (AUTH_USERNAME, AUTH_TOKEN)).replace('\n', '')
