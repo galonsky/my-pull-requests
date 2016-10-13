@@ -12,7 +12,7 @@ class termcolors:
 API_URL = "https://api.github.com"
 
 config = ConfigParser.ConfigParser()
-config.read('auth.cfg')
+config.read('pr.cfg')
 
 AUTH_USERNAME = config.get('auth', 'username')
 AUTH_TOKEN = config.get('auth', 'token')
