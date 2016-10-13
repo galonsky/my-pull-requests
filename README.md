@@ -1,6 +1,6 @@
 # Usage
 
-Create a file called `auth.cfg` in the same directory as pull-requests.py of this format:
+Create a file called `pr.cfg` in the same directory as pull-requests.py of this format:
 
 ```
 [auth]
